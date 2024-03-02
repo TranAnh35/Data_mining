@@ -31,7 +31,7 @@ Tập train được lấy mẫu 3: [10, 3, 5, 8, 5, 7, 8, 4, 5, 6]
 
 - Đánh giá Out-Of-Bag (OOB): Một số mẫu bị loại bỏ khỏi tập training con của các mô hình cơ sở cụ thể trong quá trình Bootstrap. Những mẫu "out-of-bag" này có thể được sử dụng để ước lượng hiệu suất của mô hình mà không cần đến quá trình kiểm tra chéo
 
-- Dự đoán cuối cùng: Sau khi tổng hợp các dự đoán từ tất cả các mo hình cơ sổ, Bagging tạo ra một dự đoán cuối cùng cho mỗi ví dụ.
+- Dự đoán cuối cùng: Sau khi tổng hợp các dự đoán từ tất cả các mô hình cơ sổ, Bagging tạo ra một dự đoán cuối cùng cho mỗi ví dụ.
 
 ### Thuật toán của Bagging Classifier:
 
@@ -50,3 +50,21 @@ Quá trình phân loại:
     Dự đoán lớp của vs dụ bằng cách sự dụng bộ phân loại.
     Trả về lớp được dự đoán nhiều nhất.
 ```
+
+### Xây dựng thuật toán Bagging Classifier:
+Ở phần này, ta xây dựng code Bagging. Code được viết bằng ngôn ngữ Python với class BaggingClassifier.
+
+Class BaggingClassifier gồm các tham số đầu vào:
+- base_classifier: Là mô hình cơ sở của thuật toán.
+- n_estimators: Là số lượng các base_classifier được sử dụng để huấn luyện.
+- classifiers: Là một list trống để lưu trữ các base_classifier đã được huấn luyện.
+- history: Là một dictionary được sử dụng để theo dõi các matric trong quá trình huấn luyện
+    - accuracy: Lưu trữ giá trị độ chính xác trên tập train sau mỗi một estimator.
+    - loss: Lưu trữ giá trị của hàm mất mát trên tập train sau mỗi một estimator.
+    - val_accuracy: Lưu trữ giá trị độ chính xác trên tập validation sau mỗi một estimator.
+    - val_loss: Lưu trữ giá trị của hàm mất mát trên tập validation sau mỗi một estimator
+
+Bên cạnh đó, trong class BaggingClassifier cí các method:
+- _bootstrap_sample: Thực hiện lấy mẫu bootstrap có thay thế bằng cách chọn ngẫu nhiên các chỉ số có thay thế.
+- fit: Thực hiện huấn luyện mô hình và theo dõi hiệu suất.
+- predict: Trả về kết quả dự đoán.
