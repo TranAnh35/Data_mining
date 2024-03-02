@@ -10,11 +10,13 @@ Trong trường hợp của Bagging Regression, dự đoná cuối cùng đượ
 
 Bagging giúp cải thiện độ chính xác và giảm thiểu tình trạng overfitting, đặc biệt là trong các mô hình có phương sai cao.
 
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/image3_78e8da325b.png)
+
+(Nguồn: https://www.datacamp.com/tutorial/what-bagging-in-machine-learning-a-guide-with-examples)
+
 ### Cách hoạt động của Bagging Classifier:
 Các bước cơ bản về cách thực hoạt động của Bagging Classifier như sau:
-- Lấy mẫu Bootstrap: Trong lấy mẫu Bootstrap, 'n' tập con của tập dữ liệu training gốc được lấy mẫu ngẫu nhiên với việc thay thế. Bước này đảm bảo rằng các mô hình cơ sở được đào tạo trên các tập con đa dạng của dữ liệu, vì một số mẫu có thể xuất hiện nhiều lần trong tập con mới, trong khi một số khác có thể bị loại bỏ. Điều này giảm nguy cơ overfitting và cải thiện độ chính xác của mô hình."
-
-[![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/image3_78e8da325b.png)]
+- Lấy mẫu Bootstrap: Trong lấy mẫu Bootstrap, 'n' tập con của tập dữ liệu training gốc được lấy mẫu ngẫu nhiên với việc thay thế. Bước này đảm bảo rằng các mô hình cơ sở được đào tạo trên các tập con đa dạng của dữ liệu, vì một số mẫu có thể xuất hiện nhiều lần trong tập con mới, trong khi một số khác có thể bị loại bỏ. Điều này giảm nguy cơ overfitting và cải thiện độ chính xác của mô hình.
 
 ```sh
 Ví dụ như sau:
