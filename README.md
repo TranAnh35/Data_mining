@@ -68,3 +68,35 @@ Bên cạnh đó, trong class BaggingClassifier cí các method:
 - _bootstrap_sample: Thực hiện lấy mẫu bootstrap có thay thế bằng cách chọn ngẫu nhiên các chỉ số có thay thế.
 - fit: Thực hiện huấn luyện mô hình và theo dõi hiệu suất.
 - predict: Trả về kết quả dự đoán.
+
+### Ưu điểm của Bagging:
+- Cải thiện độ chính xác (chống overfitting): Kỹ thuật lấy mẫu tái chọn (bootstrap) trong bagging giúp giảm thiểu overfitting bằng cách giảm sự phụ thuộc quá mức vào dữ liệu huấn luyện. Các mô hình con được huấn luyện trên các tập dữ liệu khác nhau, giúp mô hình tổng thể trở nên ít nhạy cảm hơn với các biến động trong dữ liệu huấn luyện.
+- Giảm thiểu sai lệch (giảm phương sai): Bagging giúp giảm phương sai của mô hình bằng cách sử dụng nhiều mô hình con có độ đa dạng cao. Khi kết hợp các dự đoán từ các mô hình con này, phương sai của dự đoán cuối cùng thường thấp hơn so với một mô hình đơn lẻ.
+- Khả năng xử lý dữ liệu nhiễu: Khi kết hợp nhiều dự đoán từ các mô hình con, bagging tạo ra dự đoán tổng thể có độ chính xác và độ tin cậy cao hơn so với một mô hình đơn lẻ. Điều này làm cho bagging trở thành một phương pháp mạnh mẽ cho các bài toán dự đoán.
+- Dễ dàng thực hiện: bagging là một kỹ thuật đơn giản và dễ triển khai, có thể được áp dụng cho nhiều loại mô hình học máy khác nhau mà không cần thay đổi cấu trúc của chúng.
+- Tăng cường tính ổn định: Bagging giúp cải thiện tính ổn định của mô hình bằng cách giảm thiểu tác động của dữ liệu nhiễu hoặc biến động. Điều này làm cho mô hình trở nên ít nhạy cảm hơn đối với thay đổi nhỏ trong dữ liệu.
+
+Bagging là một kỹ thuật học máy hiệu quả có thể mang lại nhiều lợi ích bao gồm cải thiện độ chính xác, giảm thiểu sai lệch, tăng cường khả năng xử lý dữ liệu nhiễu và dễ dàng thực hiện. Tuy nhiên, bagging cũng có một số nhược điểm sẽ được nói rõ hơn ở mục dưới đây.
+
+### Nhược điểm của Bagging:
+- Tốn thời gian và tài nguyên tính toán: Khi kết hợp nhiều dự đoán từ các mô hình con, bagging tạo ra dự đoán tổng thể có độ chính xác và độ tin cậy cao hơn so với một mô hình đơn lẻ. Điều này làm cho bagging trở thành một phương pháp mạnh mẽ cho các bài toán dự đoán.
+- Giảm độ tin cậy (Không giảm bias): Bagging thường tập trung vào việc giảm phương sai (variance) mà ít quan tâm đến bias (độ chệch) của mô hình. Do đó, nếu mô hình cơ bản có bias cao, bagging có thể không giúp cải thiện hiệu suất của mô hình đáng kể.
+- Khó khăn trong việc chọn mô hình: Trong một số trường hợp, bagging có thể không cải thiện hiệu suất của mô hình, đặc biệt là khi mô hình cơ bản đã có tính nhất quán cao đối với dữ liệu. Trong trường hợp này, việc thêm các mô hình con có thể không cần thiết và chỉ tăng thêm chi phí tính toán.
+- Có thể không hiệu quả với một số tập dữ liệu: Bagging thường cần điều chỉnh các tham số như số lượng mô hình con, kích thước của mỗi tập dữ liệu con, và cách kết hợp các dự đoán. Điều này có thể đòi hỏi nhiều thử nghiệm và tinh chỉnh để đạt được hiệu suất tốt nhất.
+- Khó khăn trong việc giải thích (tăng độ phức tạp của mô hình): Do bagging cần kết hợp các dự đoán từ nhiều mô hình con, nó có thể tạo ra một mô hình tổng thể phức tạp hơn. Điều này có thể làm cho việc diễn giải và hiểu cấu trúc của mô hình trở nên khó khăn.
+
+### Ứng dụng của Bagging:
+Bagging có nhiều ứng dụng trong machine learning và các lĩnh vực liên quan. Dưới đây là một số ứng dụng phổ biến của bagging:
+
+- Phân loại và Dự đoán: Bagging được sử dụng rộng rãi trong các bài toán phân loại và dự đoán, bao gồm phân loại hình ảnh, nhận diện ký tự, dự đoán giá cổ phiếu, dự đoán chuỗi thời gian, và nhiều bài toán khác.
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20211331.png)
+- Random Forest: Random Forest là một phương pháp quan trọng dựa trên bagging, nó sử dụng một tập hợp của nhiều cây quyết định (decision trees) để thực hiện phân loại hoặc dự đoán. Random Forest thường được sử dụng trong các bài toán như phân loại ảnh, phân loại văn bản, và dự đoán sự cố trong hệ thống.
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20211418.png)
+- Học tập trên dữ liệu không cân bằng: Trong các tập dữ liệu không cân bằng, bagging có thể được sử dụng để tăng cường hiệu suất của các mô hình bằng cách tập trung vào việc huấn luyện trên các tập dữ liệu con có tỷ lệ cân bằng giữa các lớp.
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20212627.png)
+- Dự đoán thị trường tài chính: Trong lĩnh vực tài chính, bagging được sử dụng để dự đoán giá cổ phiếu, đánh giá rủi ro tín dụng, và các ứng dụng khác trong lĩnh vực dự báo và quản lý rủi ro.
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20214316.png)
+- Xử lý dữ liệu y tế: Trong lĩnh vực y tế, bagging có thể được sử dụng để dự đoán nguy cơ bệnh lý, phân loại bệnh, dự đoán kết quả điều trị, và nhiều ứng dụng khác trong lĩnh vực dữ liệu y tế.
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20215110.png)
+- Phát hiện gian lận: Trong lĩnh vực an ninh mạng và tài chính, bagging có thể được sử dụng để phát hiện gian lận, bao gồm phát hiện gian lận tín dụng, gian lận giao dịch, và các loại gian lận khác.
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20215315.png)
