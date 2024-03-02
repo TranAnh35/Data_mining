@@ -58,7 +58,7 @@ Class BaggingClassifier gồm các tham số đầu vào:
 - base_classifier: Là mô hình cơ sở của thuật toán.
 - n_estimators: Là số lượng các base_classifier được sử dụng để huấn luyện.
 - classifiers: Là một list trống để lưu trữ các base_classifier đã được huấn luyện.
-- history: Là một dictionary được sử dụng để theo dõi các matric trong quá trình huấn luyện
+- history: Là một dictionary được sử dụng để theo dõi các matric trong quá trình huấn luyện:
     - accuracy: Lưu trữ giá trị độ chính xác trên tập train sau mỗi một estimator.
     - loss: Lưu trữ giá trị của hàm mất mát trên tập train sau mỗi một estimator.
     - val_accuracy: Lưu trữ giá trị độ chính xác trên tập validation sau mỗi một estimator.
