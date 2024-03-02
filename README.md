@@ -14,6 +14,8 @@ Bagging giúp cải thiện độ chính xác và giảm thiểu tình trạng o
 Các bước cơ bản về cách thực hoạt động của Bagging Classifier như sau:
 - Lấy mẫu Bootstrap: Trong lấy mẫu Bootstrap, 'n' tập con của tập dữ liệu training gốc được lấy mẫu ngẫu nhiên với việc thay thế. Bước này đảm bảo rằng các mô hình cơ sở được đào tạo trên các tập con đa dạng của dữ liệu, vì một số mẫu có thể xuất hiện nhiều lần trong tập con mới, trong khi một số khác có thể bị loại bỏ. Điều này giảm nguy cơ overfitting và cải thiện độ chính xác của mô hình."
 
+https://github.com/TranAnh35/Data_mining/blob/dev/PNG/image3_78e8da325b.png
+
 ```sh
 Ví dụ như sau:
 Tập dữ liệu training ban đầu: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
