@@ -89,14 +89,20 @@ Bagging là một kỹ thuật học máy hiệu quả có thể mang lại nhi�
 Bagging có nhiều ứng dụng trong machine learning và các lĩnh vực liên quan. Dưới đây là một số ứng dụng phổ biến của bagging:
 
 - Phân loại và Dự đoán: Bagging được sử dụng rộng rãi trong các bài toán phân loại và dự đoán, bao gồm phân loại hình ảnh, nhận diện ký tự, dự đoán giá cổ phiếu, dự đoán chuỗi thời gian, và nhiều bài toán khác.
-![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20211331.png)
+![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20215641.png)
+(Ứng dụng Bagging vào nhận diện kí tự)
 - Random Forest: Random Forest là một phương pháp quan trọng dựa trên bagging, nó sử dụng một tập hợp của nhiều cây quyết định (decision trees) để thực hiện phân loại hoặc dự đoán. Random Forest thường được sử dụng trong các bài toán như phân loại ảnh, phân loại văn bản, và dự đoán sự cố trong hệ thống.
 ![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20211418.png)
+(Ứng dụng của Bagging: Random Forest cho sự hiểu biết nhân quả)
 - Học tập trên dữ liệu không cân bằng: Trong các tập dữ liệu không cân bằng, bagging có thể được sử dụng để tăng cường hiệu suất của các mô hình bằng cách tập trung vào việc huấn luyện trên các tập dữ liệu con có tỷ lệ cân bằng giữa các lớp.
 ![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20212627.png)
+(Phân loại chuỗi thời gian mất cân bằng)
 - Dự đoán thị trường tài chính: Trong lĩnh vực tài chính, bagging được sử dụng để dự đoán giá cổ phiếu, đánh giá rủi ro tín dụng, và các ứng dụng khác trong lĩnh vực dự báo và quản lý rủi ro.
 ![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20214316.png)
+(Những lợi ích của phương pháp Bagging đối với mô hình dự đoán biến động thực tế)
 - Xử lý dữ liệu y tế: Trong lĩnh vực y tế, bagging có thể được sử dụng để dự đoán nguy cơ bệnh lý, phân loại bệnh, dự đoán kết quả điều trị, và nhiều ứng dụng khác trong lĩnh vực dữ liệu y tế.
 ![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20215110.png)
+(Lựa chọn đặc trưng ổn định bằng phương pháp Bagging trên dữ liệu y tế)
 - Phát hiện gian lận: Trong lĩnh vực an ninh mạng và tài chính, bagging có thể được sử dụng để phát hiện gian lận, bao gồm phát hiện gian lận tín dụng, gian lận giao dịch, và các loại gian lận khác.
 ![Packaging status](https://github.com/TranAnh35/Data_mining/blob/dev/PNG/Screenshot%202024-03-02%20215315.png)
+(Phát hiên gian lận thẻ tín dụng)
