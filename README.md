@@ -12,6 +12,7 @@ Logistic regression thường được phân thành 2 loại:
 #### Activation function
 Logistic Regression sử dụng hàm sigmoid làm hàm kích hoạt để chuyển đổi đầu ra của một hàm tuyến tính thành một giá trị xác suất nằm trong khoảng từ 0 đến 1.
 Công thức toán học:
+
 ![!\[alt text\](image.png)](<PNG/Screenshot 2024-03-04 125441.png>)
 
 Trong đó:
@@ -21,6 +22,7 @@ Trong đó:
 
 #### Hàm Sigmoid
 Đồ thị hàm Sigmoid:
+
 ![alt text](<PNG/Screenshot 2024-03-04 125745.png>)
 
 Trong bài toán Linear Regression, với 2 biến đầu vào dự báo là ![alt text](<PNG/Screenshot 2024-03-04 130200.png>) ta thu được hàm hồi quy ![alt text](<PNG/Screenshot 2024-03-04 130357.png>) và với ![alt text](<PNG/Screenshot 2024-03-04 130552.png>) là vector dòng của các hệ số hồi quy.
@@ -37,32 +39,39 @@ Giả sử rằng xác suất để một điểm dữ liệu x rơi vào:
 - class 0 là ![alt text](<PNG/Screenshot 2024-03-04 131725.png>)
 
 Xác suất xẩy ra tại điểm x_i theo hàm Sigmoid:
+
 ![alt text](<PNG/Screenshot 2024-03-04 132223.png>)
 
 Theo công thức xác suất Bernoulli xác suất tổng quát cho mẫu cho cả hai trường hợp (0, 1) sẽ là:
 ![alt text](<PNG/Screenshot 2024-03-04 132538.png>)
 
 Giả sử các quan sát trong bộ dữ liệu của chúng ta là độc lập. Khi đó xác suất đồng thời của toàn bộ các quan sát trong bộ dữ liệu sẽ bằng tích các xác suất tại từng điểm dữ liệu và bằng:
+
 ![alt text](<PNG/Screenshot 2024-03-04 132830.png>)
 
 Biểu thức trên là hàm hợp lý (Likelihood Function) đo lường mức độ hợp lý (goodness of fit) của mô hình thống kê đối với dữ liệu. Điều ta muốn giá trị của hàm hợp lý phải lớn ồng nghĩa với các trường hợp tích cực phải có xác suất càng gần 1 và tiêu cực có xác suất gần bằng 0. Do đó mục tiêu của chúng ta là tìm w sao cho biểu thức (1) là lớn nhất. quá trình tìm nghiệm thực chất là giải bài toán tối ưu hàm hợp lý (Maximum Likelihood Function). Phương pháp tìm nghiệm w dựa trên hàm hợp lý còn được gọi là ước lượng hợp lý tối đa (Maximum Likelihood Estimation). 
 
 Để tối ưu hàm (1) bớt khó khăn hơn ta sẽ logarith để chuyển tích sang tổng để tối ưu. Khi đó quy về bài toán tối ưu hàm Log Likelihood như sau:
+
 ![alt text](<PNG/Screenshot 2024-03-04 133022.png>)
 
 Việc tìm giá trị cực đại của phương trình (1) tương ứng với bài toán tối ưu:
+
 ![alt text](<PNG/Screenshot 2024-03-04 133428.png>)
 
 Vậy hàm Loss function có dạng:
+
 ![alt text](<PNG/Screenshot 2024-03-04 133553.png>)
 
 Hàm mất mát trên còn được gọi là hàm Cross Entropy. Nó là một độ đo (metric) đo lường mức độ tương quan giữa phân phối xác suất dự báo (P(y_i=1), 1 – P(y_i=1)) và phân phối xác suất thực tế (y_i, 1-y_i) Giá trị của Cross Entropy sẽ càng nhỏ nếu hai phân phối xác suất càng sát nhau, tức là giá trị dự báo giống với thực tế nhất.
 
 #### Gradient Descent
 Để tìm ra nghiệm của Logistic regression thì chúng ta sẽ thực hiện cập nhật nghiệm trên từng điểm dữ liệu (x_i, y_i). Các điểm được lựa chọn một cách ngẫu nhiên ở mỗi lượt cập nhật. Phương pháp cập nhật gradient descent như vậy còn được gọi là Stochastic Gradient Descent.
+
 ![alt text](<PNG/Screenshot 2024-03-04 133926.png>)
 
 Ta có công thức cập nhật cho Logistic Regression:
+
 ![alt text](<PNG/Screenshot 2024-03-04 134102.png>) với ![alt text](<PNG/Screenshot 2024-03-04 134531.png>)
 ## Bagging
 ### Khái niện Bagging:
