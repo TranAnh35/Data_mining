@@ -1,5 +1,27 @@
 # Báo Cáo Thực Hành
 
+## Logistic Regression
+### Giới thiệu
+Logistic regression là một thuật toán được sử dụng để phân loại các quan sát theo các danh mục rời rạc. Thay vì có đầu ra là các giá trị liên tục như thuật toán Linear Regression, Logistic regression sử dụng hàm logistic sigmoid để trả về một giá trị biểu thị xác xuất có thể ánh xạ đến hai hay nhiều lớp rời rạc.
+
+Logistic regression thường được phân thành 2 loại:
+- Logistic Regression nhị phân( Binary Logistic Regression): được sử dụng để phân loại dữ liệu thành hai lớp, thường được gán nhãn là 0 và 1 (hoặc Negative và Positive). Ví dụ như dự đoán xem 1 email có phải là spam hay không hay dự đoán xem một học sinh sẽ đậu hay trượt kỳ thi.
+- Multinomial Logistic Regression (Softmax Regression): Đây là loại Logistic Regression mở rộng, cho phép dự đoán dữ liệu vào ba hoặc nhiều hơn ba lớp không gian phân loại. Nó được sử dụng khi có ba lớp hoặc nhiều hơn trong biến phụ thuộc. Ví dụ phân loại email vào các hộp thư “rác”, “quan trọng”, “chính thức” …
+
+### Logistic Regression
+#### Activation function
+Logistic Regression sử dụng hàm sigmoid làm hàm kích hoạt để chuyển đổi đầu ra của một hàm tuyến tính thành một giá trị xác suất nằm trong khoảng từ 0 đến 1.
+Công thức toán học:
+![!\[alt text\](image.png)](<PNG/Screenshot 2024-03-04 125441.png>)
+Trong đó:
+    S(z): Đầu ra trong khoảng từ 0 đến 1 ( giá trị xác suất ước lượng).
+    z: đầu vào của hàm (là một hàm tuyến tính, ví dụ ax+b).
+    e: hằng số Euler, là cơ số của logarit tự nhiên.
+
+#### Hàm Sigmoid
+Đồ thị hàm Sigmoid:
+![alt text](<PNG/Screenshot 2024-03-04 125745.png>)
+
 ## Bagging
 ### Khái niện Bagging:
 Bagging (hoặc Bootstrap aggregating) là một kiểu học tập tổng hợp trong đó nhiều mô hình cơ sở được đào tạo độc lập và song song trên các tập con khác nhau của dữ liệu huán luyện. Một tập hợp con được tạo bằng cách lấy mẫu bootstrap, trong đó các điểm dữ liệu được chọn ngẫu nhiên và thay thế.
