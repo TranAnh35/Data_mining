@@ -27,7 +27,7 @@ Trong đó:
 
 Trong bài toán Linear Regression, với 2 biến đầu vào dự báo là ![alt text](<PNG/Screenshot 2024-03-04 130200.png>) ta thu được hàm hồi quy ![alt text](<PNG/Screenshot 2024-03-04 130357.png>) và với ![alt text](<PNG/Screenshot 2024-03-04 130552.png>) là vector dòng của các hệ số hồi quy.
 
-Chuyển tiếp qua hàm Sigmoid để dự báo xác suất vầ tạo tính phi tuyến cho mô hình hồi quy:
+Chuyển tiếp qua hàm Sigmoid để dự báo xác suất và tạo tính phi tuyến cho mô hình hồi quy:
 ![alt text](<PNG/Screenshot 2024-03-04 131348.png>)
 
 Với P(y = 1|x; w) là xác suất có điều kiện để xảy ra sự kiện y = 1 tương ứng với đầu vào x, w là trọng số.
