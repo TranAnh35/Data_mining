@@ -38,7 +38,7 @@ Giả sử rằng xác suất để một điểm dữ liệu x rơi vào:
 - class 1 là ![!\[alt text\](image.png)](<PNG/Screenshot 2024-03-04 131717.png>)
 - class 0 là ![alt text](<PNG/Screenshot 2024-03-04 131725.png>)
 
-Xác suất xẩy ra tại điểm x_i theo hàm Sigmoid:
+Xác suất xảy ra tại điểm x_i theo hàm Sigmoid:
 
 ![alt text](<PNG/Screenshot 2024-03-04 132223.png>)
 
