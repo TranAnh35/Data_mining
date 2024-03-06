@@ -158,6 +158,46 @@ Bagging là một kỹ thuật học máy hiệu quả có thể mang lại nhi�
 - Có thể không hiệu quả với một số tập dữ liệu: Bagging thường cần điều chỉnh các tham số như số lượng mô hình con, kích thước của mỗi tập dữ liệu con, và cách kết hợp các dự đoán. Điều này có thể đòi hỏi nhiều thử nghiệm và tinh chỉnh để đạt được hiệu suất tốt nhất.
 - Khó khăn trong việc giải thích (tăng độ phức tạp của mô hình): Do bagging cần kết hợp các dự đoán từ nhiều mô hình con, nó có thể tạo ra một mô hình tổng thể phức tạp hơn. Điều này có thể làm cho việc diễn giải và hiểu cấu trúc của mô hình trở nên khó khăn.
 
+### Kiểm tra thuật toán Bagging
+Các bộ dữ liệu được chọn để so sánh được mô tả như sau:
+
+```sh
+STT     |   Data Name   | Sample| Feature| Class|
+1       |DLBCl.csv      |77     |5469    |2     |
+2       |Colon.csv      |62     |2000    |2     |
+3       |Prostate.csv   |102    |6033    |2     |
+```
+
+Các bộ dữ liệu được chia làm 3 tập là Train - Validation - Test với tỉ lệ lần lượt 70 - 15 - 15 dựa trên phương pháp Stratified Sampling.
+
+Khi tiến hành kiểm tra, chúng ta sẽ so sánh về độ chính xác của mô hình từ dố sẽ đưa ra các kết luận. Độ chính xác của mô hình sẽ được đánh giá dựa trên tập Validation. Dưới dây là kết quả của thuật toán với từng data.
+- Với data: DLBCl.csv
+
+![alt text](<PNG/Screenshot 2024-03-06 192149.png>)
+
+- Với data: Colon.csv
+
+![alt text](<PNG/Screenshot 2024-03-06 192219.png>)
+
+- Với data: Prostate.csv
+
+![alt text](<PNG/Screenshot 2024-03-06 192440.png>)
+
+Do các data đều có rất nhiều feature nên không không thể thể hiện sự phụ thuộc của thuật toán vào các feature. Dưới đây là biểu đồ Boxplot thể hiện độ chính xác của thuật toán với từng data.
+- Với data: DLBCl.csv
+
+![!\[alt text\](<PNG/Screenshot 2024-03-06 192149.png>)](PNG/output_DLBCl.png)
+
+- Với data: Colon.csv
+
+![!\[alt text\](<PNG/Screenshot 2024-03-06 192219.png>)](PNG/output_Colon.png)
+
+- Với data: Prostate.csv
+
+![!\[alt text\](<PNG/Screenshot 2024-03-06 192440.png>)](PNG/output_Prostate.png)
+
+Nhận xét:
+
 ### Ứng dụng của Bagging:
 Bagging có nhiều ứng dụng trong machine learning và các lĩnh vực liên quan. Dưới đây là một số ứng dụng phổ biến của bagging:
 
