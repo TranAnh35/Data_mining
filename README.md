@@ -49,7 +49,7 @@ Giả sử các quan sát trong bộ dữ liệu của chúng ta là độc lậ
 
 ![alt text](<PNG/Screenshot 2024-03-04 132830.png>)
 
-Biểu thức trên là hàm hợp lý (Likelihood Function) đo lường mức độ hợp lý (goodness of fit) của mô hình thống kê đối với dữ liệu. Điều ta muốn giá trị của hàm hợp lý phải lớn ồng nghĩa với các trường hợp tích cực phải có xác suất càng gần 1 và tiêu cực có xác suất gần bằng 0. Do đó mục tiêu của chúng ta là tìm w sao cho biểu thức (1) là lớn nhất. quá trình tìm nghiệm thực chất là giải bài toán tối ưu hàm hợp lý (Maximum Likelihood Function). Phương pháp tìm nghiệm w dựa trên hàm hợp lý còn được gọi là ước lượng hợp lý tối đa (Maximum Likelihood Estimation). 
+Biểu thức trên là hàm hợp lý (Likelihood Function) đo lường mức độ hợp lý (goodness of fit) của mô hình thống kê đối với dữ liệu. Điều ta muốn giá trị của hàm hợp lý phải lớn đồng nghĩa với các trường hợp tích cực phải có xác suất càng gần 1 và tiêu cực có xác suất gần bằng 0. Do đó mục tiêu của chúng ta là tìm w sao cho biểu thức (1) là lớn nhất. quá trình tìm nghiệm thực chất là giải bài toán tối ưu hàm hợp lý (Maximum Likelihood Function). Phương pháp tìm nghiệm w dựa trên hàm hợp lý còn được gọi là ước lượng hợp lý tối đa (Maximum Likelihood Estimation). 
 
 Để tối ưu hàm (1) bớt khó khăn hơn ta sẽ logarith để chuyển tích sang tổng để tối ưu. Khi đó quy về bài toán tối ưu hàm Log Likelihood như sau:
 
